@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>ASCII content</title>
+	<style>
+		.content:after {
+			content: "\00A0\00A0\00A0\00A0"			/*non-breaking space*/
+			/*content: "\0020\0020\0020\0020*/
+		}
+		.indent {
+			text-indent: -999px;		/*hide the text*/
+		}
+	</style>
+</head>
+<body>
+<section>
+	<h1>ASCII stuff</h1>
+	<section class="content">
+		<span>some junk</span>
+		<span class="content"></span>
+		<span>some junk</span>
+	</section>
+	<section class="indent">
+		123124
+	</section>
+
+</section>
+</body>
+</html>
