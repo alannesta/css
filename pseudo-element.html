@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Pseudo Element</title>
+	<style>
+
+		ul {
+			list-style: none;
+		}
+		li {
+			margin-bottom: 5px;
+		}
+
+		.icon-list:before  {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+
+			background: url('./assets/f_icon.png') no-repeat;
+			background-size: 20px 20px;
+		}
+
+		.icon-list-svg:before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+
+			background: url('./assets/kiwi.svg') no-repeat;
+			background-size: 20px 20px;
+
+		}
+
+
+		.icon-list-tuning:before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+
+			background: url('./assets/f_icon.png') no-repeat;
+			background-size: 20px 20px;
+
+			/*technique to align the image with the text*/
+			position: relative;
+			left: -5px;
+			top: 3px;
+
+			/*margin-right: 5px;*/
+			/*margin-top: 3px;*/   /*this will not work, will expand the whole box*/
+		}
+
+		.icon-list-svg-tuning:before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+
+			background: url('./assets/kiwi.svg') no-repeat;
+			background-size: 20px 20px;
+		}
+
+		.icon-list2:before {
+			content: url('./assets/f_icon.png');	/* cannot control the size of the image */
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+
+		}
+
+		.icon-list2-svg:before {
+			content: url('./assets/kiwi.svg');
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+		<ul>
+			<li>List 1: background image as icon</li>
+			<li class="icon-list">This is some random feature work 0</li>
+			<li class="icon-list">This is some random feature work 1</li>
+			<li class="icon-list-svg">This is some random feature work 2</li>
+			<li class="icon-list-svg">This is some random feature work 3</li>
+		</ul>
+
+		<ul>
+			<li>List 1: background image as icon</li>
+			<li class="icon-list-tuning">This is some random feature work 0</li>
+			<li class="icon-list-tuning">This is some random feature work 1</li>
+			<li class="icon-list-svg-tuning">This is some random feature work 2</li>
+			<li class="icon-list-svg-tuning">This is some random feature work 3</li>
+		</ul>
+
+		<!--<ul>-->
+			<!--<li>List 2: content as icon</li>-->
+			<!--<li class="icon-list2">This is some random feature work 0</li>-->
+			<!--<li class="icon-list2">This is some random feature work 1</li>-->
+			<!--<li class="icon-list2-svg">This is some random feature work 2</li>-->
+			<!--<li class="icon-list2-svg">This is some random feature work 3</li>-->
+		<!--</ul>-->
+
+	</section>
+</body>
+</html>
